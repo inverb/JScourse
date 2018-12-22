@@ -1,0 +1,52 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale-1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Pasek zgłoszenie zadań</title>
+
+<style>
+    div{
+        color: red;
+    }
+
+</style>
+
+    </head>
+    <body>
+<center>
+        <h1>Pasek zgłoszenia zadań</h1>
+</center>
+
+
+        <form method="POST">
+        <table>
+            <tr>
+                <th colspan="3">Przedmiot: <input type='text' name='subject' value='<%= subject %>' /></th>
+                <th colspan="4">Imię: <input type='text' name='name' value='<%= name %>' /></th>
+                <th colspan="3">Nazwisko: <input type='text' name='surname' value='<%= surname %>' /></th>
+            </tr>
+            <tr>
+                    <% for (var i = 1; i <= 10; i++) { %>
+                        <th> <%= i %></th>    
+                  <% } %>
+            </tr>
+            <tr>
+                    <% for (var i = 0; i < 10; i++) { %>
+                        <th>
+                            <input type='text' name='points' value='<%= points[i] %>' maxlength="2" size="3" />
+                        </th>    
+                  <% } %>
+            </tr>
+        </table>
+        <button> Wyślij</button>
+        </form>
+
+        <div>
+            <%= tekst %>
+        </div>
+
+   </body>
+</html>

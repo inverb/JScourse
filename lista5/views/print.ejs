@@ -1,0 +1,35 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale-1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Pasek zgłoszenie zadań</title>
+    </head>
+    <body>
+<center>
+        <h3>
+                Pasek zgłoszenia zadań - wersja do wydruku
+        </h3>
+</center>
+
+        <table border="1">
+            <tr>
+                <th colspan="3">Przedmiot: <%= subject %></th>
+                <th colspan="3">Imię: <%= name %></th>
+                <th colspan="4">Nazwisko: <%= surname %></th>
+            </tr>
+            <tr>
+                    <% for (var i = 1; i <= 10; i++) { %>
+                        <th><%= i %></th>    
+                  <% } %>
+            </tr>
+            <tr>
+                    <% for (var i = 0; i < 10; i++) { %>
+                        <th><%= points[i] %></th>    
+                  <% } %>
+            </tr>
+        </table>
+   </body>
+</html>
